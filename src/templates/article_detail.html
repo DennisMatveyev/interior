@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<title>Дизайн интерьера стили статьи советы</title>
+{% endblock %}
+
+{% block article_detail %}
+
+<div class="container article_page">
+
+	<h2>{{ article.title }}</h2>
+
+	<div class="row">
+		
+		<div class="col-md-4">
+		{% for item in article.articlephoto_set.all %}
+			<img src="{{ item.article_photo.url }}" class='img-responsive img-thumbnail' />
+		{% endfor %}
+		</div>
+
+		<div class='col-md-8'>
+			<p>{{ article.text }}</p>
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock article_detail %}

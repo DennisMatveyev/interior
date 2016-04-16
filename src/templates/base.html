@@ -1,0 +1,91 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="Студия '' предоставляет качественные профессиональные услуги по созданию дизайна интерьера и реализации проектов для квартир, домов, офисов, ресторанов и других типов помещений в Москве." />
+        <meta name="keywords" content="дизайн, интерьер, студия, москва, проект, проектирование, современный, креативный" />
+
+        {% block title %}
+		<title>Студия дизайна интерьера</title>
+		{% endblock %}
+
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+		<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+		<link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet">
+		<link href="{% static 'css/revslider.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+		<link href="{% static 'css/mycss.css' %}" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+
+	</head>
+	<body data-spy="scroll" data-target=".main-nav">
+	
+	{% include 'navbar.html' %}
+		
+	{% block carousel %}
+	{% endblock carousel %}
+
+	{% block about %}
+	{% endblock about %}
+
+	{% block services %}
+	{% endblock services %}
+
+	{% block c2a %}
+	{% endblock c2a %}	
+	
+	{% block portfolio %}
+	{% endblock portfolio %}
+
+	{% block portfolio_detail %}
+	{% endblock portfolio_detail %}		
+
+	{% block testimonials %}
+	{% endblock testimonials %}
+	
+	{% block pricing %}
+	{% endblock pricing %}
+	
+	<!-- {% block faq %}
+	{% endblock faq %} -->
+
+	{% block call %}
+	{% endblock call %}
+	
+	{% block blog %}
+	{% endblock blog %}
+
+	{% block article_detail %}
+	{% endblock article_detail %}
+
+	{% block subscribe %}
+	{% endblock subscribe %}
+		
+	{% block contacts %}
+	{% endblock contacts %}
+
+	{% block sharing %}
+	{% endblock %}
+
+	{% include 'footer.html' %}
+	
+	{% include 'js.html' %}
+
+	</body>
+</html>

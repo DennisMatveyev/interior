@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block portfolio_detail %}
+
+<div class="container portfolio_page">
+	<div class="row">
+		<div class='col-md-12'>
+			<h2>{{ item.address }}</h2>
+			<p>{{ item.tip }}</p>
+			<p>{{ item.area }} кв. м</p>
+			<img src="{{ item.draft.url }}" class='img-responsive img-thumbnail' />
+		</div>
+	</div>
+
+	<div class="row">
+		{% for item in item.photo_set.all %}
+		<div class='col-md-4 col-sm-6'>
+			<img src="{{ item.photo.url }}" class='img-responsive img-thumbnail' />
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock portfolio_detail %}

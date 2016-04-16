@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<title>Дизайн интерьера стили статьи советы</title>
+{% endblock %}
+
+{% block blog %}
+
+<div class="container articles_by_category">
+	<h1>Статьи в категории - {{ category.name }}</h1>
+	{% for article in articles %}
+	
+		<h3><a href="/blog/{{ article.id }}">{{ article.title }}</a></h3>
+		
+	{% endfor %}
+</div>
+
+{% endblock blog %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<title>Дизайн интерьера стили статьи советы</title>
+{% endblock %}
+
+{% block blog %}
+
+<div class="container search_result">
+
+{% if articles.count > 0 %}
+
+<h1>Список статей подходящих под Ваш запрос:</h1>
+
+{% for article in articles %}
+
+<h3><a href="/blog/{{ article.id }}">{{ article.title }}</a></h3>
+
+{% endfor %}
+
+{% else %}
+
+<h1>Соответствий не найдено.</h1>
+<h1>Попробуйте другие варианты.</h1>
+
+{% endif %}
+
+</div>
+
+{% endblock blog %}

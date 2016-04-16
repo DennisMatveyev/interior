@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<title>Дизайн интерьера стили статьи советы</title>
+{% endblock %}
+
+{% block blog %}
+
+		<section class="blog" id="blog">
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title st-center" id='articles'>
+							<p>Статьи и полезные советы</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="block">
+					
+					<div class="col-md-8">
+						<div class="blog-post">
+						{% for article in articles %}
+							<h2 class="post-title"><a href="{% url 'article_detail' article.id %}">{{ article.title }}</a></h2>
+							
+							{% if article.articlephoto_set.all %}						
+							<div class="post-thumb">
+								<a href="{% url 'article_detail' article.id %}"><img src="{{ article.onephoto.article_photo.url }}" alt="" class="img-responsive"></a>
+							</div>
+							{% else %}
+							
+							{% endif %}
+							
+							<div class="post-content">
+								<p>{{ article.text|truncatewords:50 }}<a href="{% url 'article_detail' article.id %}" class="more-link">Читать дальше <span class="meta-nav">&rarr;</span></a></p>
+							</div>
+							
+							<div class="post-meta">
+								<p><strong>{{ article.pub_date }}</strong></p>
+							</div>
+						{% endfor %}
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="widgets">
+							
+							<div class="widget">
+								<form action="/search/" method="GET">{% csrf_token %}
+									<div class="input-group">
+										<input type="text" id="search_input" class="form-control" name="search_input"placeholder="Поиск...">
+										<span class="input-group-btn">
+											<button id="search_btn" class="btn btn-default btn-lg" type="submit"><i class="fa fa-search"></i></button>
+										</span>
+									</div>
+								</form>
+							</div>
+							
+							<div class="widget">
+								<h2 class="widget-title">Стили интерьера</h2>
+								<ul>
+								{% for category in categories %}
+									<li><a href="/category/{{ category.id }}">{{ category }} <span class="badge pull-right">{{ category.article_set.count }}</span></a></li>
+								{% endfor %}
+								</ul>
+							</div>
+
+							<div id="tag_cloud-3" class="widget widget_tag_cloud">
+								<h2 class="widget-title">Тэги</h2>
+								<div class="tagcloud">
+								{% for tag in tags %}
+									<a href="/tag/{{ tag.id }}">{{ tag }}</a>
+								{% endfor %}
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				
+				</div>
+  				
+  				<div class='row'>
+  					<div class="pagination">
+ 
+				    {% if articles.has_previous %}
+				        <a class='lg' href="?page={{ articles.previous_page_number }}">←</a>
+				    {% endif %}
+				 
+				    {% for num in articles.paginator.page_range %}
+				        {% if num == articles.number %}
+				            <span class="current lg"><b>{{ num }}</b></span>
+				        {% else %}
+				            <a class='lg' href="?page={{ num }}"> {{ num }}</a>
+				        {% endif %} 
+				    {% endfor %}
+				 
+				    {% if articles.has_next %}
+				        <a class='lg' href="?page={{ articles.next_page_number }}">→</a>
+				    {% endif %}
+
+				    </div>
+ 				</div>
+			
+			</div>
+		</section>
+
+{% endblock blog %}

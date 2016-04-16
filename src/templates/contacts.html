@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block contacts %}
+
+		<section class="contact" id="contact">
+			<div class="container">
+                <div id="phone-numbers" class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-2">
+								<i class="fa fa-mobile fa-5x"></i>
+							</div>
+							<div class="col-md-10">
+								<h4>+38 050 555 50 50</h4>
+								<h4>+38 050 555 50 50</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="emails" class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-2">
+								<i class="fa fa-envelope fa-5x"></i>
+							</div>
+							<div class="col-md-10">
+								<h4>imat.site@gmail.com</h4>
+								<h4>imat.site@gmail.com</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h3>Или напишите нам прямо сейчас:</h3>
+					</div>
+				</div>
+
+				<div class='row'>
+				<div class="col-md-6 col-md-offset-3">
+					<form action="" method="POST">{% csrf_token %}
+						
+						{{ form|crispy }}
+
+						<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending...">Отправить</button>	
+
+					</form>
+				</div>
+				</div>
+
+				<div id="adres" class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-2">
+								<i class="fa fa-university fa-3x"></i>
+							</div>
+							<div class="col-md-10">
+								<address><h4>Москва</h4></address>							
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+{% endblock contacts %}

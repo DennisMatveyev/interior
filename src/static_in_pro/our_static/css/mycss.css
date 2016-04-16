@@ -1,0 +1,42 @@
+.portfolio_page, 
+.article_page, 
+.search_result,
+.articles_by_category,
+.articles_by_tag {
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+.contact {
+	margin-top: 60px;
+}
+
+#thanks {
+	margin-top: 120px;
+}
+
+#articles {
+	margin-top: 60px;
+}
+
+.pagination {
+	margin-top: 0px;
+	padding-left: 30px;
+}
+
+.lg {
+	font-size: 30px;
+}
+
+#phone-numbers, #emails {
+	margin-bottom: 20px;
+}
+
+#adres {
+	margin-top: 40px;
+}
+#sharing {
+	margin: 20px;
+	text-align: center;
+}
+
