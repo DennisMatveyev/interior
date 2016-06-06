@@ -28,8 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'imat.site@gmail.com'
-EMAIL_HOST_PASSWORD = 'imat.site2015'
+EMAIL_HOST_USER = 'site@gmail.com'
+EMAIL_HOST_PASSWORD = '*****'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
