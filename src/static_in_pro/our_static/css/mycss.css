@@ -1,8 +1,9 @@
-.portfolio_page, 
-.article_page, 
+.portfolio_page,
+.article_page,
 .search_result,
 .articles_by_category,
-.articles_by_tag {
+.articles_by_tag,
+.services {
 	margin-top: 100px;
 	margin-bottom: 30px;
 }
@@ -39,4 +40,3 @@
 	margin: 20px;
 	text-align: center;
 }
-
