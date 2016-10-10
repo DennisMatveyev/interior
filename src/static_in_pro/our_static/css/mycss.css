@@ -40,3 +40,7 @@
 	margin: 20px;
 	text-align: center;
 }
+
+div.item>img:hover {
+	cursor: pointer;
+}
