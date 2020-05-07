@@ -13,9 +13,9 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row" id="lightgallery" >
 		{% for item in item.photo_set.all %}
-		<div class='col-md-4 col-sm-6'>
+		<div class='col-md-4 col-sm-6 item' data-src="{{ item.photo.url }}" >
 			<img src="{{ item.photo.url }}" class='img-responsive img-thumbnail' />
 		</div>
 		{% endfor %}

@@ -21,6 +21,7 @@
 		<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
 		<link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet">
 		<link href="{% static 'css/revslider.css' %}" rel="stylesheet">
+		<link href="{% static 'css/lightgallery.css' %}" rel="stylesheet">
 		<link href="{% static 'css/style.css' %}" rel="stylesheet">
 		<link href="{% static 'css/mycss.css' %}" rel="stylesheet">
 
@@ -35,9 +36,9 @@
 
 	</head>
 	<body data-spy="scroll" data-target=".main-nav">
-	
+
 	{% include 'navbar.html' %}
-		
+
 	{% block carousel %}
 	{% endblock carousel %}
 
@@ -48,26 +49,26 @@
 	{% endblock services %}
 
 	{% block c2a %}
-	{% endblock c2a %}	
-	
+	{% endblock c2a %}
+
 	{% block portfolio %}
 	{% endblock portfolio %}
 
 	{% block portfolio_detail %}
-	{% endblock portfolio_detail %}		
+	{% endblock portfolio_detail %}
 
 	{% block testimonials %}
 	{% endblock testimonials %}
-	
+
 	{% block pricing %}
 	{% endblock pricing %}
-	
+
 	<!-- {% block faq %}
 	{% endblock faq %} -->
 
 	{% block call %}
 	{% endblock call %}
-	
+
 	{% block blog %}
 	{% endblock blog %}
 
@@ -76,7 +77,7 @@
 
 	{% block subscribe %}
 	{% endblock subscribe %}
-		
+
 	{% block contacts %}
 	{% endblock contacts %}
 
@@ -84,7 +85,7 @@
 	{% endblock %}
 
 	{% include 'footer.html' %}
-	
+
 	{% include 'js.html' %}
 
 	</body>

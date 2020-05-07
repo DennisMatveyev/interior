@@ -1,9 +1,9 @@
 jQuery(document).ready(function() {
 	"use strict";
-	
 
 
-/* Navigation */	
+
+/* Navigation */
 jQuery('.main-nav a:not(.dropdown-toggle)').bind('click', function(event) {
 		var $anchor = $(this);
 		jQuery('html, body').stop().animate({
@@ -12,7 +12,7 @@ jQuery('.main-nav a:not(.dropdown-toggle)').bind('click', function(event) {
 		event.preventDefault();
 	});
 
-/* Count */	
+/* Count */
 jQuery('.st-ff-count').appear();
 	jQuery(document.body).on('appear', '.st-ff-count', function(e, $affected) {
 		$affected.each(function(i) {
@@ -27,7 +27,7 @@ jQuery('.st-ff-count').appear();
 		});
 	});
 
-/* tooltip */	
+/* tooltip */
 jQuery('[data-toggle="tooltip"]').tooltip();
 
 
@@ -48,13 +48,13 @@ jQuery('.clients-carousel').owlCarousel({
     	autoPlay: true,
     	pagination: false
     });
-	
-/* Subscribe */	
+
+/* Subscribe */
 jQuery(".subscribe-form").ajaxChimp({
         callback: mcCallback,
-        url: "http://cantothemes.us8.list-manage2.com/subscribe/post?u=37a0cb83e98c8633253ad0acd&id=03d8ef0996" // Replace your mailchimp post url inside double quote "".  
-    });	
- 
+        url: "http://cantothemes.us8.list-manage2.com/subscribe/post?u=37a0cb83e98c8633253ad0acd&id=03d8ef0996" // Replace your mailchimp post url inside double quote "".
+    });
+
     function mcCallback (res) {
 		if(res.result === 'success') {
 			$('.subscribe-result').html('<i class="pe-7s-check"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
@@ -62,28 +62,28 @@ jQuery(".subscribe-form").ajaxChimp({
 			$('.subscribe-result').html('<i class="pe-7s-close-circle"></i>' + res.msg).delay(500).slideDown(1000).delay(10000).slideUp(1000);
 		}
 	}
-	
+
    function checkEmpty(selector) {
         if (selector.val()=="" || selector.val()==selector.prop("placeholder")) {
           selector.addClass('formFieldError',500);
           return false;
         } else {
-          selector.removeClass('formFieldError',500); 
+          selector.removeClass('formFieldError',500);
           return true;
         }
     }
     function validateEmail(email) {
         var regex = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
         if (!regex.test(email.val())) {
-          email.addClass('formFieldError',500); 
+          email.addClass('formFieldError',500);
           return false;
         } else {
-          email.removeClass('formFieldError',500); 
+          email.removeClass('formFieldError',500);
           return true;
         }
     }
 
-/* Contact Form */	
+/* Contact Form */
 jQuery('.contact-form').submit(function () {
       var $this = $(this),
           result = true;
@@ -97,7 +97,7 @@ jQuery('.contact-form').submit(function () {
       if(!checkEmpty($this.find('#mssg'))) {
         result=false;
       }
-      
+
       if(result==false) {
         return false;
       }
@@ -107,9 +107,9 @@ jQuery('.contact-form').submit(function () {
       var data = $this.serialize();
 
       $.ajax({
-          url: "sender.php", 
-          type: "POST",        
-          data: data,     
+          url: "sender.php",
+          type: "POST",
+          data: data,
           cache: false,
           success: function (html) {
           	console.log(html);
@@ -117,7 +117,7 @@ jQuery('.contact-form').submit(function () {
                   $('#result-message').addClass('alert alert-success').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Success!</strong> Message Send. We will contact with you soon.').delay(500).slideDown(500).delay(10000).slideUp('slow');
 
                   $btn.button('reset');
-                  
+
               } else {
                   $('#result-message').addClass('alert alert-danger').html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Error!</strong> Message Sending Error! Please try again').delay(500).slideDown(500).delay(10000).slideUp('slow');
                   $btn.button('reset');
@@ -137,7 +137,7 @@ jQuery('.contact-form').submit(function () {
 
 });
 
-/* Portfolio */	
+/* Portfolio */
 jQuery(window).load(function () {
 	var $grid = $('.grid'),
 		$sizer = $grid.find('.shuffle__sizer'),
@@ -156,8 +156,8 @@ jQuery(window).load(function () {
 		$('label.btn-main').removeClass('btn-main');
 		$('input[name="filter"]:checked').parent().addClass('btn-main');
 	});
-	
-	
+
+
    function home_height () {
 		var element = $('.st-home-unit'),
 			elemHeight = element.height(),
@@ -181,8 +181,8 @@ jQuery(window).resize(function () {
     ,fading = $('.st-home-unit')
     ,fading2 = $('.hero-overlayer')
 	;
-	
-/* Nav Scroll */	
+
+/* Nav Scroll */
 jQuery(window).bind('scroll', function(){
 	    var offset = $(document).scrollTop()
 	        ,opacity=0
@@ -204,4 +204,12 @@ jQuery(window).bind('scroll', function(){
 	    }
 });
 
-});	
+/* Portfolio gallery */
+$('#lightgallery').lightGallery({
+  width:'86%',
+  selector: '.item',
+  thumbWidth: 150,
+  thumbContHeight: 100,
+});
+
+});

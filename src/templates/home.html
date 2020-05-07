@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block carousel %}	
+{% block carousel %}
 	<div id="unicorn-slideshow" class="unicorn-slideshow">
     <div class="container">
       <div id='unicorn_slider_wrapper' class='unicorn_slider_wrapper fullwidthbanner-container' >
         <div id='unicorn-rev-slider' class='rev_slider fullwidthabanner'>
           <ul>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='1000' 
+            <li data-transition='random' data-slotamount='7' data-masterspeed='1000'
             data-thumb='{% static "images/2.jpg" %}'><img src='{% static "images/3.jpg" %}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="slider-image1" />
               <div class="info">
                 <div class='tp-caption ExtraLargeTitle sft  tp-resizeme ' data-x='0'  data-y='100'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;'><span>Проектирование - Дизайн - Интерьер</span></div>
                 <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='0'  data-y='195'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'><span>Добро пожаловать</span></div>
-                <div class='tp-caption sfb  tp-resizeme ' data-x='0'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='{% url "services" %}' class="buy-btn">Наши услуги</a></div>
-                <div    class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class='tp-caption sfb  tp-resizeme ' data-x='0'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='{% url "services" %}' class="buy-btn">УСЛУГИ</a></div>
+                <div    class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'>Лучшие решения только для вас</div>
               </div>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='1000' 
+            <li data-transition='random' data-slotamount='7' data-masterspeed='1000'
             data-thumb='{% static "images/3.jpg" %}'><img src='{% static "images/2.jpg" %}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="slider-image2"  />
               <div class="info">
                 <div class='tp-caption ExtraLargeTitle sft  tp-resizeme ' data-x='0'  data-y='100'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;'><span>Photography - Portfolio - Advertismnet</span></div>
                 <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='0'  data-y='195'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'><span>Creative Design</span></div>
-                <div class='tp-caption sfb  tp-resizeme ' data-x='0'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='{% url "portfolio" %}' class="buy-btn">Наше портфолио</a></div>
-                <div    class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'>Farm Fresh Produce Right to Your Door</div>
+                <div class='tp-caption sfb  tp-resizeme ' data-x='0'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='{% url "portfolio" %}' class="buy-btn">ПОРТФОЛИО</a></div>
+                <div    class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'>Best solutions only for you</div>
               </div>
             </li>
           </ul>
@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-{% endblock carousel %}			
+{% endblock carousel %}
 
 {% block about %}
 		<section class="about" id="about">
@@ -42,9 +42,11 @@
 							<p>О нас</p>
 						</div>
 						<div class="block">
-							<div class="col-md-12 padd25 no-padding-top no-padding-bottom padding-left-15">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem. </p>
-							</div>
+							  <div class="col-md-12 padd25 no-padding-top no-padding-bottom padding-left-15">
+							    <p>Дизайн-студия Creatiff - это команда профессиональных архитекторов и дизайнеров, специализирующихся в области дизайна интерьера жилых и общественных помещений. Вот уже более 15 лет мы занимаемся разработкой и реализацией эксклюзивных интерьеров различного типа помещений: жилые помещения, гостиницы, офисы, магазины, рестораны и т.д. Для нас дизайн интерьера это не просто сочетание стандартного набора конструкций, материалов, форм и элементов, это тонкая наука, направленная на выявление всех потребностей и особенностей клиента, позволяющая создать уникальный, эксклюзивный проект, в точности отражающий характер и образ жизни владельца. Мы не просто создаем идеи, мы воплощаем их в жизнь! Мы гордимся своей репутацией! За годы нашей работы мы зарекомендовали себя как надежного и ответственного партнера, доказательством чему служат многочисленные отзывы довольных клиентов. Мы не боимся экспериментов! В своей работе мы сочетаем классические решения и новаторские идеи, смело комбинируем формы и материалы. Мы открыты для общения и всегда предоставим полную консультацию относительно вашего проекта!
+							    </p>
+							  </div>
+
 							<div class="padd25 no-padding-top no-padding-bottom padding-left-15">
 								<img src="{% static 'photos/about.jpg' %}" alt="" class="img-responsive">
 							</div>
@@ -67,30 +69,26 @@
 						<div class="block">
 							<div class="col-md-3">
 								<div class="st-feature">
-									<div class="st-feature-icon"><i class="fa fa-cog"></i></div>
-									<strong class="st-feature-title">Fully Responsive</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<div class="st-feature-icon"><i class="fa fa-calculator"></i></div>
+									<strong class="st-feature-title">Предпроектный анализ и планировочное решение</strong>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="st-feature">
 									<div class="st-feature-icon"><i class="fa fa-university"></i></div>
-									<strong class="st-feature-title">Simple and Clean</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<strong class="st-feature-title">Разработка концепции и эскизный проект</strong>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="st-feature">
-									<div class="st-feature-icon"><i class="fa fa-comments-o"></i></div>
-									<strong class="st-feature-title">Easy to Customize</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<div class="st-feature-icon"><i class="fa fa-delicious"></i></div>
+									<strong class="st-feature-title">Архитектурно - дизайнерское проектирование <br>(РАБОЧИЙ ПРОЕКТ)</strong>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="st-feature">
-									<div class="st-feature-icon"><i class="fa fa-life-ring"></i></div>
-									<strong class="st-feature-title">Creative Design</strong>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<div class="st-feature-icon"><i class="fa fa-group"></i></div>
+									<strong class="st-feature-title">Авторский надзор за строительством и декорированием интерьера</strong>
 								</div>
 							</div>
 						</div>
@@ -106,9 +104,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="c2a">
-							<h2>Like Our Design?</h2>
-							<p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.</p>
-							<a href="{% url 'contacts' %}" class="btn btn-main btn-lg">Свяжись с нами</a>
+							<h2>Понравился наш дизайн?</h2>
+							<a href="{% url 'contacts' %}" class="btn btn-main btn-lg">Свяжитесь с нами</a>
 						</div>
 					</div>
 				</div>
@@ -129,7 +126,7 @@
 					</div>
 				</div>
 				<div class="row">
-					{% for item in photos %}	
+					{% for item in photos %}
 						<div class="col-md-4 col-sm-6 no-padding">
 							<a href='{% url "portfolio" %}'><img src="{{ item.photo.url }}" class='img-responsive' /></a>
 						</div>
@@ -140,7 +137,7 @@
 {% endblock portfolio %}
 
 		<section class="clients">
-			
+
 		</section>
 
 {% block testimonials %}
@@ -185,20 +182,39 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="pricing-table">
 							<div class="pricing-header">
-								<div class="pt-price">Базовый</div>
+								<div class="pt-price">Стандарт</div>
 							</div>
 							<div class="pricing-body">
 								<ul>
-									<li><i class="fa fa-check"></i> 2GB Space</li>
-									<li><i class="fa fa-check"></i> 10GB Bandwidth</li>
-									<li><i class="fa fa-check"></i> Free Domain</li>
-									<li><i class="fa fa-times"></i> Free Email</li>
-									<li><i class="fa fa-times"></i> Free cPanel</li>
-									<li><i class="fa fa-times"></i> Free FTP</li>
-									<li><i class="fa fa-times"></i> Free Support</li>
+									<li><i class="fa fa-check"></i> Выезд на объект</li>
+									<li><i class="fa fa-check"></i> Выполнение обмерного чертежа с указанием инженерных коммуникаций</li>
+									<li><i class="fa fa-check"></i> Разработка концепции и эскизный проект, подбор отделочных материалов, мебели и оборудования.</li>
+									<li><i class="fa fa-times"></i> Разработка нескольких вариантов планировочных решений</li>
+									<li><i class="fa fa-times"></i> Архитектурно - дизайнерское проектирование ( РАБОЧИЙ ПРОЕКТ)</li>
+									<li><i class="fa fa-times"></i> Авторский надзор за строительством и декорированием интерьера ( Кол-во выездов на объект по согласованию с заказчиком а так же строительной бригадой)</li>
+								</ul>
+							</div>
+							<div class="pricing-footer">
+								<a href="{% url 'services' %}" class="btn btn-default">Подробнее</a>
+							</div>
+							</div>
+					</div>
+					<div class="col-md-4">
+						<div class="pricing-table">
+							<div class="pricing-header">
+								<div class="pt-price">Премиум</div>
+							</div>
+							<div class="pricing-body">
+								<ul>
+									<li><i class="fa fa-check"></i> Выезд на объект</li>
+									<li><i class="fa fa-check"></i> Выполнение обмерного чертежа с указанием инженерных коммуникаций</li>
+									<li><i class="fa fa-check"></i> Разработка концепции и эскизный проект, подбор отделочных материалов, мебели и оборудования.</li>
+									<li><i class="fa fa-check"></i> Разработка нескольких вариантов планировочных решений</li>
+									<li><i class="fa fa-check"></i> Архитектурно - дизайнерское проектирование ( РАБОЧИЙ ПРОЕКТ)</li>
+									<li><i class="fa fa-times"></i> Авторский надзор за строительством и декорированием интерьера ( Кол-во выездов на объект по согласованию с заказчиком а так же строительной бригадой)</li>
 								</ul>
 							</div>
 							<div class="pricing-footer">
@@ -206,62 +222,20 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+
+					<div class="col-md-4">
 						<div class="pricing-table">
 							<div class="pricing-header">
-								<div class="pt-price">Standard</div>
+								<div class="pt-price">Люкс</div>
 							</div>
 							<div class="pricing-body">
 								<ul>
-									<li><i class="fa fa-check"></i> 5GB Space</li>
-									<li><i class="fa fa-check"></i> 50GB Bandwidth</li>
-									<li><i class="fa fa-check"></i> Free Domain</li>
-									<li><i class="fa fa-check"></i> Free Email</li>
-									<li><i class="fa fa-times"></i> Free cPanel</li>
-									<li><i class="fa fa-times"></i> Free FTP</li>
-									<li><i class="fa fa-times"></i> Free Support</li>
-								</ul>
-							</div>
-							<div class="pricing-footer">
-								<a href="{% url 'services' %}" class="btn btn-default">Подробнее</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="pricing-table">
-							<div class="pricing-header">
-								<div class="pt-price">Premium</div>
-							</div>
-							<div class="pricing-body">
-								<ul>
-									<li><i class="fa fa-check"></i> 20GB Space</li>
-									<li><i class="fa fa-check"></i> 1TB Bandwidth</li>
-									<li><i class="fa fa-check"></i> Free Domain</li>
-									<li><i class="fa fa-check"></i> Free Email</li>
-									<li><i class="fa fa-check"></i> Free cPanel</li>
-									<li><i class="fa fa-check"></i> Free FTP</li>
-									<li><i class="fa fa-times"></i> Free Support</li>
-								</ul>
-							</div>
-							<div class="pricing-footer">
-								<a href="{% url 'services' %}" class="btn btn-default">Подробнее</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="pricing-table">
-							<div class="pricing-header">
-								<div class="pt-price">Luxury</div>
-							</div>
-							<div class="pricing-body">
-								<ul>
-									<li><i class="fa fa-check"></i> Unlimited Space</li>
-									<li><i class="fa fa-check"></i> Unlimited Bandwidth</li>
-									<li><i class="fa fa-check"></i> Free Domain</li>
-									<li><i class="fa fa-check"></i> Free Email</li>
-									<li><i class="fa fa-check"></i> Free cPanel</li>
-									<li><i class="fa fa-check"></i> Free FTP</li>
-									<li><i class="fa fa-check"></i> Free Support</li>
+									<li><i class="fa fa-check"></i> Выезд на объект</li>
+									<li><i class="fa fa-check"></i> Выполнение обмерного чертежа с указанием инженерных коммуникаций</li>
+									<li><i class="fa fa-check"></i> Разработка концепции и эскизный проект, подбор отделочных материалов, мебели и оборудования.</li>
+									<li><i class="fa fa-check"></i> Разработка нескольких вариантов планировочных решений</li>
+									<li><i class="fa fa-check"></i> Архитектурно - дизайнерское проектирование ( РАБОЧИЙ ПРОЕКТ)</li>
+									<li><i class="fa fa-check"></i> Авторский надзор за строительством и декорированием интерьера ( Кол-во выездов на объект по согласованию с заказчиком а так же строительной бригадой)</li>
 								</ul>
 							</div>
 							<div class="pricing-footer">
@@ -333,7 +307,7 @@
 						<h3 class="subscribe-title">подпишитесь на новости дизайна</h3>
 					</div>
 
-					<div class="col-md-8 col-md-offset-2">	
+					<div class="col-md-8 col-md-offset-2">
 						<form action="{% url 'subscribe' %}" method="POST">{% csrf_token %}
 							<div class="input-group">
 								{{ form }}
@@ -343,9 +317,9 @@
 							</div>
 						</form>
 					</div>
-					
+
 					{% if success %}
-					<div id="subscribe-result" class="col-md-6 col-md-offset-3 alert alert-warning" role="alert">	
+					<div id="subscribe-result" class="col-md-6 col-md-offset-3 alert alert-warning" role="alert">
 						{{ success }}
 					</div>
 					{% endif %}
